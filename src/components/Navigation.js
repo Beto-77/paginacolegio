@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
-import logoImg from '../assets/wmremove-transformed.jpeg';
+
 
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
