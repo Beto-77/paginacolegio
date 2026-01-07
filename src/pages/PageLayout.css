@@ -1,0 +1,352 @@
+.page-container {
+  width: 100%;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--guindo) 0%, var(--guindo-light) 100%);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 20px;
+  opacity: 0.95;
+}
+
+.page-content {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 30px 0;
+  margin-bottom: 60px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--guindo) 0%, var(--guindo-light) 100%);
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: var(--guindo);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 4px solid var(--white);
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0 0 5px var(--light-gray);
+}
+
+.timeline-content {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--guindo);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  color: var(--guindo);
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.timeline-content p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.highlights {
+  margin-top: 60px;
+  padding: 40px;
+  background: var(--light-gray);
+  border-radius: 10px;
+}
+
+.highlights h2 {
+  color: var(--guindo);
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.highlight-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--guindo);
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-card h3 {
+  color: var(--guindo);
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.highlight-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Tabla de contenido */
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content-table thead {
+  background-color: var(--guindo);
+  color: var(--white);
+}
+
+.content-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.content-table td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-table tbody tr:hover {
+  background-color: var(--light-gray);
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.staff-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.staff-avatar {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--guindo) 0%, var(--guindo-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.staff-info {
+  padding: 20px;
+}
+
+.staff-info h3 {
+  color: var(--guindo);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.staff-info p {
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.staff-bio {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--guindo);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--guindo);
+  box-shadow: 0 0 0 3px rgba(107, 27, 71, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: var(--guindo);
+  color: var(--white);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--guindo-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 32px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-right: 0;
+    padding-left: 80px;
+    text-align: left;
+  }
+
+  .timeline-marker {
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .timeline-content {
+    border-left: none;
+    border-top: 4px solid var(--guindo);
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    padding: 40px 16px;
+    min-height: 220px;
+  }
+
+  .page-content {
+    padding: 30px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 { font-size: 26px; }
+  .page-header p { font-size: 14px; }
+  .timeline-marker { width: 44px; height: 44px; font-size: 13px; }
+}

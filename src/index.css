@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+:root {
+  --guindo: #6b1b47;
+  --guindo-light: #8b2d5f;
+  --guindo-dark: #4a0f31;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --border-color: #e0e0e0;
+}
+
+/* Animations and global motion settings */
+:root {
+  --motion-duration-fast: 180ms;
+  --motion-duration: 360ms;
+  --motion-duration-slow: 600ms;
+  --easing-default: cubic-bezier(.2,.9,.2,1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subtleScale {
+  from { transform: scale(.98); opacity: .95 }
+  to { transform: scale(1); opacity: 1 }
+}
+
+/* Apply gentle animation to common building blocks */
+.page-header, .highlight-card, .staff-card, .timeline-content, .footer-container, .nav-logo {
+  animation: fadeInUp var(--motion-duration) var(--easing-default) both;
+}
+
+.nav-link { transition: transform var(--motion-duration-fast) var(--easing-default), background-color var(--motion-duration) var(--easing-default); }
+.nav-link:hover { transform: translateY(-3px); }
+
+.submit-btn { animation: subtleScale var(--motion-duration-slow) var(--easing-default) both; }
+
+/* Image and media subtle reveal */
+img, .staff-avatar, .timeline-marker { will-change: transform, opacity; transition: transform var(--motion-duration) var(--easing-default), opacity var(--motion-duration) var(--easing-default); }
+

@@ -1,0 +1,3 @@
+{
+  "robots": "index, follow"
+}
