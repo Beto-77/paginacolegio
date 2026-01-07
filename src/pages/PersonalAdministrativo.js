@@ -296,3 +296,7 @@ const styles = `
     line-height: 1.6;
   }
 `;
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
